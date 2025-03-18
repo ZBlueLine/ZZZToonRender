@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Tgame_Character_Outline
+  m_Shader: {fileID: 4800000, guid: 757bf86dd9c45e645a270f4457fd69bf, type: 3}
+  m_ValidKeywords:
+  - _NORMAL_VERTEXCOLORSMOOTH
+  m_InvalidKeywords:
+  - _ZWRITE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2100
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpShadowMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetalMatCap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutlineColorMatcap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RimLightMatcap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RimLightWidthMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondLayerColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StockingMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StockingMatcap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThirdLayerColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - Dst: 0
+    - DstA: 0
+    - Src: 1
+    - SrcA: 1
+    - _BaseGroup: 0
+    - _Binding: 0
+    - _BindingMesh: 0
+    - _BumpScale: 1
+    - _Cull: 2
+    - _DepthRim: 0
+    - _FaceArea: 0
+    - _FaceGroup: 0
+    - _FaceHighLight: 0
+    - _FaceSSSSoftness: 0.083
+    - _HairShadowDistance: 1
+    - _HairShadowOn: 0
+    - _IndirectLightMixBaseColor: 1
+    - _LightGroup: 0
+    - _LightSideRim: 0
+    - _MainLightColorUsage: 1
+    - _MetalMatCapStrength: 0.64
+    - _MetalSpecularBrightness: 3.63
+    - _MetalSpecularExpon: 3.5
+    - _Normal: 1
+    - _Offsetx: 0
+    - _Offsety: 0
+    - _OutlineGroup: 0
+    - _OutlineWidth: 2.87
+    - _RimGroup: 0
+    - _RimLightMixAlbedo: 1
+    - _RimLightSoft: 0.1
+    - _RimLightThreshold: 1
+    - _RimLightWidth: 0.246
+    - _RimMatcapOn: 0
+    - _SHLightingStrength: 1
+    - _SecondShadowThresholdCenter: 0.4
+    - _SecondShadowThresholdSoftness: 0.075
+    - _ShadowThresholdCenter: 0.7
+    - _ShadowThresholdSoftness: 0.083
+    - _Smooth: 1
+    - _SpecularBrightness: 2.4
+    - _SpecularExpon: 1.3
+    - _SpecularKsMetal: 1
+    - _SpecularKsNonMetal: 0.04
+    - _Stencil: 0
+    - _StencilComp: 0
+    - _StencilGroup: 0
+    - _StencilOp: 0
+    - _StockingArea: 0
+    - _StockingAreaGroup: 0
+    - _StockingRefractDepth: 0.5
+    - _ZTest: 4
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FirstLayerColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineDarkColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineLightColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimLightTintColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+    - _SSSColor: {r: 0.848, g: 0.7497263, b: 0.721648, a: 1}
+    - _SecondLayerColor: {r: 0.848, g: 0.7497263, b: 0.721648, a: 1}
+    - _StockingTint: {r: 0.8, g: 0.5584577, b: 0.5215999, a: 1}
+    - _ThirdLayerColor: {r: 0.8, g: 0.5584577, b: 0.5215999, a: 1}
+  m_BuildTextureStacks: []

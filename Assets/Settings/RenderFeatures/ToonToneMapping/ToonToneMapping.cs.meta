@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 8b5c95581e1c8404eb8128700ddb4218
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ToonToneMappingShader: {fileID: 4800000, guid: 36cc8b432ba2e7a4283207a0e231db73,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

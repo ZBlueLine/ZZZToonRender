@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 02769e46dedf9c342b23e336f0885541
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - CustomMesh: {instanceID: 0}
+  - sharedMat_ColorAdjust: {fileID: 2100000, guid: e58f61653e0428e4d9d416f4b776f85e,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
