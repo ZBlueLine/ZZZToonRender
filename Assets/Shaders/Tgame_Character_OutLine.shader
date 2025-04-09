@@ -2,84 +2,6 @@ Shader "Tgame/Character/OutLine"
 {
     Properties
     {
-        [GroupStart]_BaseGroup("基础贴图",int) = 0
-        _BaseColor("Base Color", Color) = (1, 1, 1, 1)
-        [NoScaleOffset] _BaseMap("Base Map", 2D) = "white" {}
-        [NoScaleOffset]_SecondLayerColorMap("过渡区颜色", 2D) = "white" {}
-        [NoScaleOffset]_ThirdLayerColorMap("暗部基颜色", 2D) = "white" {}
-        [GroupEnd]
-
-        [GroupStart]_LightGroup("光照设置",int) = 0
-        [NoScaleOffset][Linear]_LightMap("Light Map R:光照分色对比度， G:金属度， B:高光亮度， A:光滑度 (面部不需要这张图)", 2D) = "black" {}
-        _Smooth("Smooth", Range(0, 1)) = 1
-
-        [HDR]_EmissionColor("Emission Color", Color) = (0, 0, 0, 1)
-        [Space(20)]
-
-        [NoScaleOffset][Linear]_BumpShadowMap("Normal Map RG:法线 B:明暗偏移 A:自发光", 2D) = "white" {}
-        _BumpScale("Normal Map Strength", Float) = 1
-        [Space(20)]
-
-        [Header(Diffuse Setting)]
-        _FirstLayerColor("受光区颜色", Color) = (1, 1, 1, 1)
-        _SSSColor("SSS颜色", Color) = (0.848, 0.7497263, 0.721648, 1)
-        _SecondLayerColor("过渡区颜色", Color) = (0.848, 0.7497263, 0.721648, 1)
-        _ThirdLayerColor("暗部颜色", Color) = (0.8, 0.5584577, 0.5215999, 1)
-        _ShadowThresholdCenter("一层光照分色位置", Range(0.5, 1)) = 0.7
-        _SecondShadowThresholdCenter("二层光照分色位置", Range(0.5, 1)) = 0.4
-        _ShadowThresholdSoftness("一层光照对比度(脸部模型只需要调这个)", Range(0, 1)) = 0.083
-        _SecondShadowThresholdSoftness("二层光照对比度", Range(0, 1)) = 0.075
-        _MainLightColorUsage("主光颜色饱和度", Range(0, 1)) = 1
-        [Space(20)]
-        [Header(Specular Setting)]
-        _SpecularExpon("非金属高光聚集", Range(1, 30)) = 1.3
-        _SpecularBrightness("非金属高光整体亮度", Range(0, 40)) = 2.4
-        
-        _MetalSpecularExpon("金属高光聚集", Range(1, 30)) = 3.5
-        _MetalSpecularBrightness("金属高光整体亮度", Range(0, 20)) = 3.63
-        [Space(20)]
-
-        [Header(IndirectLight Setting)]
-        [NoScaleOffset]_MetalMatCap("金属间接光Matcap", 2D) = "black" {}
-        [HideInInspector]_SpecularKsNonMetal("非金属反射系数", Float) = 0.04
-        [HideInInspector]_SpecularKsMetal("金属反射系数", Float) = 1
-        _SHLightingStrength("非金属间接光强度", Range(0, 5)) = 1
-        _MetalMatCapStrength("金属间接光强度", Range(0, 3)) = 0.64
-        _IndirectLightMixBaseColor("间接光混合主贴图颜色", Range(0, 1)) = 1
-        [GroupEnd]
-
-        [GroupStart]_StockingAreaGroup("丝袜控制",int) = 0
-        [Toggle(_AREA_STOCKING)]_StockingArea("丝袜区域", int) = 0
-        [NoScaleOffset][Linear]_StockingMap("丝袜贴图", 2D) = "black" {}
-        [NoScaleOffset]_StockingMatcap("丝袜Matcap", 2D) = "black" {}
-        _StockingTint("丝袜颜色", Color) = (0.8, 0.5584577, 0.5215999, 1)
-        _StockingRefractDepth("折射深度", Range(0, 1)) = 0.5
-        [GroupEnd]
-
-        [GroupStart]_FaceGroup("面部控制",int) = 0
-        [Toggle(_AREA_FACE)]_FaceArea("面部区域", int) = 0
-        [Toggle(_BINDING_MESH)]_BindingMesh("模型经过绑定勾选此项", int) = 0
-        [NoScaleOffset][Linear]_FaceMap("面部阴影控制图 R:SDF G:高光维持区域 B:亮部光感Mask A:头发阴影区域", 2D) = "white" {}
-        [Space(10)]
-        [Toggle(_HARI_SHADOW)]_HairShadowOn("开启头发阴影", int) = 0
-        _HairShadowDistance("头发阴影偏移(脸部模型上调)", Range(0, 4)) = 1
-        [GroupEnd]
-
-        [GroupStart]_RimGroup("边缘光设置",int) = 0
-        [NoScaleOffset][Linear]_RimLightWidthMap("边缘光控制贴图 R:亮度 G:宽度", 2D) = "white"{}
-        [Toggle]_LightSideRim("单边边缘光", float) = 0
-        [Toggle(_SIDERIM_MATCAP)]_RimMatcapOn("边缘光Matcap遮罩", int) = 0
-        [NoScaleOffset][Linear]_RimLightMatcap("边缘光Matcap", 2D) = "black"{}
-        _RimLightWidth("边缘光宽度", Range(0, 2)) = 0.246
-        _RimLightSoft("边缘光软硬", Range(0, 0.5)) = 0.1
-        _RimLightMixAlbedo("边缘光混合主贴图颜色", Range(0, 1)) = 1
-        
-        [Toggle(_DEPTH_RIMLIGHT)]_DepthRim("深度边缘光", float) = 0
-        _RimLightThreshold("深度边缘光阈值", Range(0, 1)) = 1
-
-        [HDR]_RimLightTintColor("边缘光颜色", Color) = (0.7, 0.7, 0.7, 1)
-        [GroupEnd]
-
         [GroupStart]_OutlineGroup("描边设置",int) = 0
         [KeywordEnum(Vert, VertexColorSmooth) ] _Normal("平滑法线来源" , Float) = 0
         [Toggle]_Binding("UV3Smooth模式且模型有绑定请勾选此项" , Float) = 0
@@ -110,47 +32,6 @@ Shader "Tgame/Character/OutLine"
     HLSLINCLUDE
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
         CBUFFER_START(UnityPerMaterial)
-            float4 _BaseMap_ST;
-            half4 _BaseColor;
-            half4 _EmissionColor;
-            half _BumpScale;
-            half _MetalMatCapStrength;
-            half _SHLightingStrength;
-            half _IndirectLightMixBaseColor;
-
-            half _HairShadowDistance;
-
-            half4 _StockingTint;
-            half _StockingRefractDepth;
-
-            half _IridescenceCenter;
-            half _IridescenceSoftness;
-            half _IridescenceStrength;
-            half4 _FirstLayerColor;
-            half4 _SSSColor;
-            half4 _SecondLayerColor;
-            half4 _ThirdLayerColor;
-            half _ShadowThresholdCenter;
-            half _SecondShadowThresholdCenter;
-            half _ShadowThresholdSoftness;
-            half _SecondShadowThresholdSoftness;
-            half _MainLightColorUsage;
-            half _SpecularExpon;
-            half _Smooth;
-            half _MetalSpecularExpon;
-            half _SpecularBrightness;
-            half _MetalSpecularBrightness;
-            half _SpecularKsNonMetal;
-            half _SpecularKsMetal;
-
-            half _LightSideRim;
-            half _RimLightWidth;
-            half _RimLightSoft;
-            half _RimLightMixAlbedo;
-            half3 _RimLightTintColor;
-            
-            half _RimLightThreshold;
-
             //Outline
             float _Binding;
             float4 _OutlineLightColor;
